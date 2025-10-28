@@ -1,67 +1,113 @@
-# Super Trunfo - Países
+Super Trunfo - Desafio Nível Mestre (C)
 
-Este é um jogo de **Super Trunfo** em C, onde o jogador pode comparar atributos de duas cartas de países. O jogo inclui um menu interativo e lógica de comparação para diversos atributos.
+Este projeto é o nível mestre do jogo Super Trunfo em C, onde o jogador pode comparar duas cartas de países com dois atributos diferentes.
+O código integra conceitos de estruturas de decisão (if, switch), cálculos com variáveis, entrada e saída de dados e lógica de comparação.
 
----
+Objetivo do Desafio
 
-## Funcionalidades
+Permitir que o jogador:
 
-- Cadastro de duas cartas de países com os seguintes atributos:
-  - Estado da carta (A-H)
-  - Código da carta (Ex: A01)
-  - Nome do país
-  - População
-  - Área (km²)
-  - PIB (bilhões de reais)
-  - Número de pontos turísticos
-  - Menu interativo usando `switch` para escolher o atributo a ser comparado.
-  - Comparação dos atributos usando regras específicas:
-  - Maior valor vence (População, Área, PIB, Pontos Turísticos, PIB per Capita)
-  - Menor valor vence (Densidade demográfica)
-  - Exibição clara do resultado da comparação:
-  - Nome dos países
-  - Valor do atributo escolhido
-  - País vencedor ou empate
+Cadastre duas cartas de países com atributos numéricos.
 
----
+Escolha dois atributos diferentes para comparar entre as cartas.
 
-## Requisitos
+Veja qual carta vence com base na soma dos dois atributos.
 
-- Sistema operacional: Windows (para suporte a acentuação no terminal)
-- Compilador C (GCC, MinGW, etc.)
-- Terminal com suporte a UTF-8
+A exceção continua sendo a densidade demográfica, onde o menor valor vence.
 
----
+Funcionalidades
 
-## Como Compilar
+Cadastro de duas cartas de países com os seguintes atributos:
 
-No terminal, navegue até a pasta do projeto e digite:
+Estado (A-H)
 
-```bash
-gcc -o SuperTrunfo3 main.c
-Isto gerará o executável supertrunfo.exe.
+Código (ex: A01)
+
+Nome do país
+
+População
+
+Área (km²)
+
+PIB (em bilhões)
+
+Número de pontos turísticos
+
+Cálculo automático:
+
+Densidade demográfica = população / área
+
+PIB per capita = PIB total / população
+
+Menu interativo com 6 opções de atributos para comparar:
+
+População
+
+Área
+
+PIB
+
+Pontos turísticos
+
+Densidade demográfica
+
+PIB per capita
+
+Comparação de dois atributos diferentes (sem repetição).
+
+Exibição dos valores de cada atributo para cada carta.
+
+Cálculo da soma dos dois atributos escolhidos.
+
+Exibição clara do vencedor ou mensagem de empate.
+
+Lógica de Comparação
+
+O jogador escolhe dois atributos diferentes.
+
+O programa compara ambos e soma seus valores.
+
+A carta com maior soma vence.
+
+Se as somas forem iguais → Empate!
+
+Tecnologias Utilizadas
+
+Linguagem: C
+
+Compilador recomendado: GCC
+
+IDE sugerida: VS Code ou Code::Blocks
+
+Biblioteca: <windows.h> para compatibilidade com acentuação UTF-8 no Windows
+
+Estrutura do Código
+
+Entrada de dados para as duas cartas
+
+Cálculos automáticos (densidade e PIB per capita)
+
+Menus interativos com switch
+
+Lógica condicional (if, else if, else)
+
+Impressão formatada dos resultados
 
 Como Executar
-No terminal, execute:
 
-bash
-./SuperTrunfo3
-O programa irá solicitar:
+Copie o código para um arquivo chamado super_trunfo_mestre.c
 
-Dados da primeira carta (estado, código, país, população, área, PIB e pontos turísticos)
+Compile com o comando:
 
-Dados da segunda carta
+gcc super_trunfo_mestre.c -o super_trunfo_mestre
 
-Escolha do atributo para comparação (1-6)
 
-Menu de Atributos
-Opção	Atributo
-1	População
-2	Área (km²)
-3	PIB (bilhões de reais)
-4	Número de Pontos Turísticos
-5	Densidade Populacional
-6	PIB per Capita
+Execute:
+
+./super_trunfo_mestre
+
+
+Siga as instruções no terminal para inserir os dados das cartas e escolher os atributos.
 
 Exemplo de Execução
 Digite o estado da primeira carta (A-H): A
@@ -69,20 +115,44 @@ Digite o código da primeira carta (Ex: A01): A01
 Digite o nome do país: Brasil
 Digite a população: 214000000
 Digite a área (em km²): 8515767
-Digite o PIB (em bilhões de reais): 1850
-Digite o número de pontos turísticos: 150
+Digite o PIB (em bilhões de reais): 9700
+Digite o número de pontos turísticos: 25
 
 Digite o estado da segunda carta (A-H): B
 Digite o código da segunda carta (Ex: B02): B02
 Digite o nome do país: Argentina
-Digite a população: 45000000
-Digite a área (em km²): 2780400
-Digite o PIB (em bilhões de reais): 550
-Digite o número de pontos turísticos: 120
+Digite a população: 46000000
+Digite a área (em km²): 2780000
+Digite o PIB (em bilhões de reais): 4000
+Digite o número de pontos turísticos: 18
 
-Escolha um atributo para comparar (1-6): 1
+====================================
+### Menu De Atributos ###
+1 - População
+2 - Área
+3 - PIB
+4 - Número de Pontos Turísticos
+5 - Densidade Populacional
+6 - PIB per Capita
+=====================================
+Escolha o primeiro atributo (1-6): 3
+Escolha o segundo atributo (diferente do primeiro): 6
 
-Atributo escolhido: População
-Brasil: 214000000 habitantes
-Argentina: 45000000 habitantes
-Vencedor: Brasil!
+Atributo 1: PIB
+Brasil: 9700.00 | Argentina: 4000.00
+
+Atributo 2: PIB per Capita
+Brasil: 45233.64 | Argentina: 86956.52
+
+Soma total dos atributos:
+Brasil: 54933.64
+Argentina: 90956.52
+Vencedor final: Argentina!
+=====================================
+
+Autor
+
+Desenvolvido por Fábio
+Desafio: Super Trunfo - Nível Mestre (C)
+Disciplina: Introdução à Programação de Computadores
+Primeiro Semestre
