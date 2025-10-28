@@ -1,23 +1,22 @@
-Super Trunfo - Desafio Nível Mestre (C)
+Super Trunfo – Desafio Nível Mestre (C)
 
-Este projeto é o nível mestre do jogo Super Trunfo em C, onde o jogador pode comparar duas cartas de países com dois atributos diferentes.
-O código integra conceitos de estruturas de decisão (if, switch), cálculos com variáveis, entrada e saída de dados e lógica de comparação.
+Este projeto é a versão nível mestre do clássico jogo Super Trunfo, desenvolvido em C, onde o jogador compara duas cartas de países usando dois atributos numéricos diferentes.
 
-Objetivo do Desafio
+O código integra conceitos de lógica de programação como estruturas de decisão, menus interativos, cálculos de atributos e exibição clara de resultados.
 
-Permitir que o jogador:
+Objetivo
 
-Cadastre duas cartas de países com atributos numéricos.
+Permitir que o jogador cadastre duas cartas de países.
 
-Escolha dois atributos diferentes para comparar entre as cartas.
+Escolher dois atributos diferentes para comparar entre as cartas.
 
-Veja qual carta vence com base na soma dos dois atributos.
+Determinar a carta vencedora com base na soma dos valores dos atributos escolhidos.
 
-A exceção continua sendo a densidade demográfica, onde o menor valor vence.
+Observação: Para densidade demográfica, o menor valor vence.
 
 Funcionalidades
 
-Cadastro de duas cartas de países com os seguintes atributos:
+Cadastro de cartas com atributos:
 
 Estado (A-H)
 
@@ -29,17 +28,17 @@ População
 
 Área (km²)
 
-PIB (em bilhões)
+PIB (bilhões)
 
 Número de pontos turísticos
 
-Cálculo automático:
+Cálculos automáticos:
 
 Densidade demográfica = população / área
 
-PIB per capita = PIB total / população
+PIB per capita = PIB / população
 
-Menu interativo com 6 opções de atributos para comparar:
+Menu interativo de atributos para comparação:
 
 População
 
@@ -53,88 +52,75 @@ Densidade demográfica
 
 PIB per capita
 
-Comparação de dois atributos diferentes (sem repetição).
+Comparação de dois atributos diferentes.
 
-Exibição dos valores de cada atributo para cada carta.
+Cálculo da soma dos atributos e exibição do vencedor final ou empate.
 
-Cálculo da soma dos dois atributos escolhidos.
+Lógica do Jogo
 
-Exibição clara do vencedor ou mensagem de empate.
+Jogador escolhe primeiro e segundo atributo (não podem ser iguais).
 
-Lógica de Comparação
+Valores dos atributos são exibidos para cada carta.
 
-O jogador escolhe dois atributos diferentes.
+Soma dos valores dos atributos escolhidos determina o vencedor.
 
-O programa compara ambos e soma seus valores.
+Em caso de empate, uma mensagem é exibida.
 
-A carta com maior soma vence.
-
-Se as somas forem iguais → Empate!
-
-Tecnologias Utilizadas
+Tecnologias
 
 Linguagem: C
 
-Compilador recomendado: GCC
+Compilador: GCC recomendado
 
-IDE sugerida: VS Code ou Code::Blocks
+IDE: VS Code ou Code::Blocks
 
-Biblioteca: <windows.h> para compatibilidade com acentuação UTF-8 no Windows
+Biblioteca: <windows.h> (para acentuação UTF-8 no Windows)
 
 Estrutura do Código
 
-Entrada de dados para as duas cartas
+Entrada de dados das duas cartas
 
-Cálculos automáticos (densidade e PIB per capita)
+Cálculos de densidade e PIB per capita
 
-Menus interativos com switch
+Menu interativo com switch
 
-Lógica condicional (if, else if, else)
+Comparação usando if-else
 
-Impressão formatada dos resultados
+Impressão formatada de resultados
 
 Como Executar
 
-Copie o código para um arquivo chamado super_trunfo_mestre.c
+Salve o código como SuperTrunfo3.c
 
-Compile com o comando:
+Compile com:
 
-gcc super_trunfo_mestre.c -o super_trunfo_mestre
+gcc SuperTrunfo3.c -o SuperTrunfo3
 
 
 Execute:
 
-./super_trunfo_mestre
+./SuperTrunfo3
 
 
 Siga as instruções no terminal para inserir os dados das cartas e escolher os atributos.
 
 Exemplo de Execução
 Digite o estado da primeira carta (A-H): A
-Digite o código da primeira carta (Ex: A01): A01
+Digite o código da primeira carta: A01
 Digite o nome do país: Brasil
 Digite a população: 214000000
-Digite a área (em km²): 8515767
-Digite o PIB (em bilhões de reais): 9700
+Digite a área (km²): 8515767
+Digite o PIB (bilhões): 9700
 Digite o número de pontos turísticos: 25
 
 Digite o estado da segunda carta (A-H): B
-Digite o código da segunda carta (Ex: B02): B02
+Digite o código da segunda carta: B02
 Digite o nome do país: Argentina
 Digite a população: 46000000
-Digite a área (em km²): 2780000
-Digite o PIB (em bilhões de reais): 4000
+Digite a área (km²): 2780000
+Digite o PIB (bilhões): 4000
 Digite o número de pontos turísticos: 18
 
-====================================
-### Menu De Atributos ###
-1 - População
-2 - Área
-3 - PIB
-4 - Número de Pontos Turísticos
-5 - Densidade Populacional
-6 - PIB per Capita
-=====================================
 Escolha o primeiro atributo (1-6): 3
 Escolha o segundo atributo (diferente do primeiro): 6
 
@@ -148,11 +134,9 @@ Soma total dos atributos:
 Brasil: 54933.64
 Argentina: 90956.52
 Vencedor final: Argentina!
-=====================================
 
 Autor
 
-Desenvolvido por Fábio
-Desafio: Super Trunfo - Nível Mestre (C)
-Disciplina: Introdução à Programação de Computadores
-Primeiro Semestre
+Fábio
+Desafio: Super Trunfo – Nível Mestre (C)
+Disciplina: Introdução à Programação de Computadores - 1º Semestre
